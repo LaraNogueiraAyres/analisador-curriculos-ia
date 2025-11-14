@@ -1,0 +1,10 @@
+[
+  {
+    "nome": "João Silva",
+    "texto_curriculo": "Desenvolvedor Node.js com 3 anos de experiência..."
+  },
+  {
+    "nome": "Maria Souza",
+    "texto_curriculo": "Engenheira de software com foco em Java e Spring..."
+  }
+]

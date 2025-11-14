@@ -1,0 +1,21 @@
+{
+  "titulo": "Desenvolvedor Backend Node.js Pleno",
+  "descricao": "Vaga para desenvolvedor backend com foco em Node.js, APIs REST, bancos relacionais e experiência em times ágeis.",
+  "hard_skills_desejadas": {
+    "javascript": 3,
+    "node.js": 3,
+    "typescript": 2,
+    "sql": 2,
+    "postgresql": 2,
+    "git": 1,
+    "docker": 1,
+    "aws": 1
+  },
+  "soft_skills_desejadas": {
+    "trabalho em equipe": 2,
+    "comunicacao": 2,
+    "proatividade": 1,
+    "resolucao de problemas": 1,
+    "lideranca": 1
+  }
+}
