@@ -77,7 +77,7 @@ Lista de candidatos:
 
 ▶️ Como Executar o Projeto
 1. Clonar o repositório
-git clone https://github.com/seu-usuario/analisador-curriculos-ia.git
+git clone [https://github.com/seu-usuario/analisador-curriculos-ia.git](https://github.com/LaraNogueiraAyres/analisador-curriculos-ia)
 cd analisador-curriculos-ia
 
 2. Criar ambiente virtual (opcional, recomendado)
