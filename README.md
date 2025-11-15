@@ -1,8 +1,8 @@
-📄 RecrutAI — Sistema Inteligente de Análise de Currículos
+#📄 RecrutAI — Sistema Inteligente de Análise de Currículos
 
 Um mini-projeto de Inteligência Artificial para seleção automatizada de candidatos, baseado em análise de hard skills, soft skills e ranking explicável.
 
-📌 Sobre o Projeto
+##📌 Sobre o Projeto
 
 O RecrutAI foi desenvolvido para apoiar equipes de RH na triagem inicial de currículos de desenvolvedores de software.
 O sistema:
@@ -21,7 +21,7 @@ Produz um ranking ordenado dos melhores candidatos
 
 É um protótipo funcional, simples de executar, e ideal para expansão futura.
 
-🧠 Funcionalidades
+##🧠 Funcionalidades
 
 ✔️ Extração automática de hard skills
 ✔️ Detecção de soft skills
@@ -31,7 +31,7 @@ Produz um ranking ordenado dos melhores candidatos
 ✔️ Ranking dos candidatos
 ✔️ Arquitetura limpa e extensível
 
-📂 Estrutura do Projeto
+##📂 Estrutura do Projeto
 analisador-curriculos-ia/
 ├── README.md
 ├── requirements.txt
@@ -43,7 +43,7 @@ analisador-curriculos-ia/
 └── src/
     └── main.py
 
-🗂 Exemplos de Arquivos
+##🗂 Exemplos de Arquivos
 📄 job_profile.json
 {
   "titulo": "Desenvolvedor Backend Node.js Pleno",
@@ -67,9 +67,9 @@ analisador-curriculos-ia/
   }
 ]
 
-▶️ Como Executar
+##▶️ Como Executar
 1. Clone o repositório
-git clone https://github.com/seu-usuario/analisador-curriculos-ia.git
+git clone [https://github.com/seu-usuario/analisador-curriculos-ia.git](https://github.com/LaraNogueiraAyres/analisador-curriculos-ia)
 cd analisador-curriculos-ia
 
 2. (Opcional) Crie um ambiente virtual
@@ -93,7 +93,7 @@ pip install -r requirements.txt
 4. Execute o sistema
 python src/main.py
 
-📊 Exemplo de Saída
+##📊 Exemplo de Saída
 1. João Silva
    Score total: 0.87 (Hard: 0.92, Soft: 0.75)
    Hard skills encontradas: node.js, javascript, sql
@@ -102,7 +102,7 @@ python src/main.py
    Soft skills faltantes : lideranca, proatividade
 ---------------------------------------------------------
 
-🧩 Como o Sistema Funciona
+##🧩 Como o Sistema Funciona
 🔤 1. Normalização de Texto
 
 minúsculas
@@ -134,7 +134,7 @@ habilidades ausentes
 
 notas parciais e finais
 
-🚀 Possíveis Melhorias
+##🚀 Possíveis Melhorias
 
 Conversão para API (FastAPI)
 
