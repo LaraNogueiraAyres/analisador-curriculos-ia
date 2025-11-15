@@ -1,27 +1,37 @@
-Sistema de Análise Inteligente de Currículos
+📄 RecrutAI — Sistema Inteligente de Análise de Currículos
 
-Mini-projeto de Inteligência Artificial para apoio ao recrutamento de candidatos na área de desenvolvimento de software.
+Um mini-projeto de Inteligência Artificial para seleção automatizada de candidatos, baseado em análise de hard skills, soft skills e ranking explicável.
 
-1. Descrição do Projeto
+📌 Sobre o Projeto
 
-Este sistema analisa currículos automaticamente, identificando hard skills, soft skills e calculando o nível de compatibilidade de cada candidato com uma vaga específica.
-O protótipo desenvolvido:
+O RecrutAI foi desenvolvido para apoiar equipes de RH na triagem inicial de currículos de desenvolvedores de software.
+O sistema:
 
-lê a descrição de uma vaga (com pesos para cada skill);
+Lê a descrição de uma vaga
 
-analisa currículos textuais;
+Analisa currículos automaticamente
 
-busca habilidades técnicas e comportamentais;
+Identifica competências técnicas e comportamentais
 
-calcula um score de compatibilidade;
+Gera um score de compatibilidade
 
-gera explicações sobre as decisões;
+Explica cada decisão da IA (skills encontradas e faltantes)
 
-produz um ranking final ordenado.
+Produz um ranking ordenado dos melhores candidatos
 
-O objetivo é demonstrar uma aplicação prática de IA explicável no contexto de Recursos Humanos.
+É um protótipo funcional, simples de executar, e ideal para expansão futura.
 
-2. Estrutura do Projeto
+🧠 Funcionalidades
+
+✔️ Extração automática de hard skills
+✔️ Detecção de soft skills
+✔️ Sistema de pesos configuráveis
+✔️ Score de compatibilidade (0 a 1)
+✔️ Explicação detalhada das decisões
+✔️ Ranking dos candidatos
+✔️ Arquitetura limpa e extensível
+
+📂 Estrutura do Projeto
 analisador-curriculos-ia/
 ├── README.md
 ├── requirements.txt
@@ -33,13 +43,8 @@ analisador-curriculos-ia/
 └── src/
     └── main.py
 
-3. Arquivos de Entrada
-3.1. job_profile.json
-
-Define a vaga e os pesos atribuídos às habilidades.
-
-Exemplo:
-
+🗂 Exemplos de Arquivos
+📄 job_profile.json
 {
   "titulo": "Desenvolvedor Backend Node.js Pleno",
   "hard_skills_desejadas": {
@@ -54,106 +59,89 @@ Exemplo:
   }
 }
 
-3.2. candidatos.json
-
-Lista de currículos analisados.
-
-Exemplo:
-
+📄 candidatos.json
 [
   {
     "nome": "João Silva",
-    "texto_curriculo": "Desenvolvedor Node.js com 3 anos de experiência..."
+    "texto_curriculo": "Desenvolvedor Node.js com 3 anos de experiência em APIs REST..."
   }
 ]
 
-4. Como Executar
-4.1. Criar ambiente virtual (opcional)
-python -m venv venv
-venv\Scripts\activate        (Windows)
-source venv/bin/activate     (Linux/Mac)
+▶️ Como Executar
+1. Clone o repositório
+git clone https://github.com/seu-usuario/analisador-curriculos-ia.git
+cd analisador-curriculos-ia
 
-4.2. Instalar dependências
+2. (Opcional) Crie um ambiente virtual
+python -m venv venv
+
+
+Ativar:
+
+Windows
+
+venv\Scripts\activate
+
+
+Linux/Mac
+
+source venv/bin/activate
+
+3. Instale as dependências
 pip install -r requirements.txt
 
-4.3. Executar
-
-Na raiz do projeto:
-
+4. Execute o sistema
 python src/main.py
 
-5. Funcionamento da IA
+📊 Exemplo de Saída
+1. João Silva
+   Score total: 0.87 (Hard: 0.92, Soft: 0.75)
+   Hard skills encontradas: node.js, javascript, sql
+   Hard skills faltantes : docker
+   Soft skills encontradas: comunicacao
+   Soft skills faltantes : lideranca, proatividade
+---------------------------------------------------------
 
-O sistema segue as etapas:
+🧩 Como o Sistema Funciona
+🔤 1. Normalização de Texto
 
-5.1. Normalização de texto
-
-tudo em minúsculo
+minúsculas
 
 remoção de acentos
 
-remoção de caracteres especiais
+limpeza de caracteres
 
-5.2. Dicionários de sinônimos
+🧩 2. Dicionário de Sinônimos
 
-Mapeiam diferentes formas de escrever uma mesma skill, por exemplo:
+Exemplo:
 
-node.js → ["node.js", "nodejs", "node js"]
+"node.js": ["node.js", "nodejs", "node js"]
 
-5.3. Avaliação de hard skills e soft skills
+🧠 3. Avaliação de Skills
 
-Cada skill procurada contribui com um peso específico.
+busca por termos no currículo
 
-5.4. Cálculo do score final
+soma de pesos atribuídos pela vaga
+
+🧮 4. Score Final
 score_total = 0.7 * score_hard + 0.3 * score_soft
 
-5.5. Geração da explicação
+💬 5. Geração de Explicações
 
-O sistema informa:
+habilidades encontradas
 
-skills encontradas
+habilidades ausentes
 
-skills ausentes
+notas parciais e finais
 
-score parcial de hard skills
+🚀 Possíveis Melhorias
 
-score parcial de soft skills
+Conversão para API (FastAPI)
 
-score final
+Interface web (React, Vue, ou Flask + HTML)
 
-5.6. Ranking
+Upload e leitura de currículos em PDF/Docx
 
-Os candidatos são ordenados do mais compatível ao menos compatível.
+Uso de embeddings para análise semântica
 
-6. Exemplo de Saída
-1. João Silva
-   Score total: 0.87 (Hard: 0.92, Soft: 0.75)
-   Hard skills encontradas: node.js, javascript
-   Hard skills faltantes : docker
-   Soft skills encontradas: comunicacao
-   Soft skills faltantes : liderança, proatividade
---------------------------------------------------------
-
-7. Possíveis Evoluções
-
-API REST com FastAPI
-
-Interface web com React/Vue
-
-Upload de currículos em PDF
-
-Extração automática com NLP
-
-Embeddings para busca semântica
-
-Explicabilidade mais sofisticada
-
-8. Tecnologias Utilizadas
-
-Python 3.x
-
-json
-
-unicodedata
-
-pathlib
+Treinamento de modelo supervisionado
